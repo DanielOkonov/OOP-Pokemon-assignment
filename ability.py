@@ -5,6 +5,7 @@ class Ability:
         self.generation = generation
         self.effect = effect
         self.effect_short = effect_short
-        self.pokemon = pokemon  # List of Pokémon that can have this ability
+        self.pokemon = pokemon  # List of Pokémon names
 
-    # Additional methods for ability-related processing
+    def __str__(self):
+        return f"Name: {self.name}, ID: {self.ability_id}, Generation: {self.generation}, Effect: {self.effect}, Effect (Short): {self.effect_short}, Pokemon: {', '.join(self.pokemon)}"

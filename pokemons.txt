@@ -1,0 +1,5 @@
+pikachu
+charmander
+25  # This is the ID for Pikachu
+bulbasaur
+squirtle
