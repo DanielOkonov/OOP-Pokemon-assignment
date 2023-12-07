@@ -3,6 +3,13 @@ import asyncio
 from pokeretriever import PokeRetriever
 
 def parse_arguments():
+    """
+    Parses command line arguments for the Pokédex application.
+    Allows the user to specify the mode (pokemon, ability, move),
+    input file, direct input data, expanded information flag, and output file name.
+
+    :return: Parsed arguments object.
+    """
     parser = argparse.ArgumentParser(description='Pokédex Application')
     parser.add_argument('mode', choices=['pokemon', 'ability', 'move'], help='Mode of the application')
     parser.add_argument('--inputfile', help='Input file with data')
@@ -12,6 +19,11 @@ def parse_arguments():
     return parser.parse_args()
 
 async def main():
+    """
+    The main asynchronous function of the Pokédex application.
+    Depending on the mode, it fetches data about Pokémon, abilities, or moves,
+    and prints or saves the output as specified.
+    """
     args = parse_arguments()
     pokedex_facade = PokeRetriever()
 
